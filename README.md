@@ -4,4 +4,4 @@ Enable the use of [**Zoxide**](https://github.com/ajeetdsouza/zoxide) to quickly
 
 ## Add Your Own Editors
 
-By default, **Zoxidify** uses the built-in editors specified in `ZOXIDIFY_DEFAULT_EDITORS`. You can override this with your own editors by defining `ZOXIDIFY_EDITORS` in your ZSH configuration file.
+By default, **Zoxidify** uses the built-in editors specified in `ZOXIDIFY_EDITORS`. You can override this with your own editors by defining `ZOXIDIFY_EDITORS` in your ZSH configuration file.

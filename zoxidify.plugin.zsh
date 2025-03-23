@@ -1,16 +1,12 @@
 #!/usr/bin/env zsh
 
-ZOXIDIFY_DEFAULT_EDITORS=(
-    code
-    open
-    xdg-open
-)
-
-if [ ${#ZOXIDIFY_EDITORS[@]} -eq 0 ]; then
-    ZOXIDIFY_EDITORS=("${ZOXIDIFY_DEFAULT_EDITORS[@]}")
+if [ -z "$ZOXIDIFY_EDITORS" ]; then
+    ZOXIDIFY_EDITORS=(
+        code
+        open
+        xdg-open
+    )
 fi
-
-unset -v ZOXIDIFY_DEFAULT_EDITORS
 
 ___zoxidify_get_zoxide_out() {
     local zoxide_args="$1"
@@ -71,4 +67,4 @@ __zoxidify_main() {
 __zoxidify_main
 
 unset -f __zoxidify_patch_editor __zoxidify_main
-unset -v __ZOXIDIFY_GET_LAST_ARG __ZOXIDIFY_GET_ZOXIDE_OUT __ZOXIDIFY_GET_ZOXIDE_INTERACTIVE_OUT ZOXIDIFY_EDITORS
+unset -v __ZOXIDIFY_GET_LAST_ARG __ZOXIDIFY_GET_ZOXIDE_OUT __ZOXIDIFY_GET_ZOXIDE_INTERACTIVE_OUT ZOXIDIFY_EDITORS ZOXIDIFY_PREFIX ZOXIDIFY_INTERACTIVE_PREFIX
