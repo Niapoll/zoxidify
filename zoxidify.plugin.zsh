@@ -19,7 +19,7 @@ fi
 __ZOXIDIFY_GET_ALIAS_EXISTS=$(( ! $(functions zoxidify_get_alias &> /dev/null; echo $?)))
 __ZOXIDIFY_GET_INTERACTIVE_ALIAS_EXISTS=$(( ! $(functions zoxidify_get_interactive_alias &> /dev/null; echo $?)))
 
-___zoxidify_get_zoxide_out() {
+__zoxidify_get_zoxide_out() {
     local zoxide_args="$1"
     [ -z "$zoxide_args" ] || zoxide_args="$zoxide_args "
 
@@ -30,10 +30,10 @@ ___zoxidify_get_zoxide_out() {
     "
 }
 
-__ZOXIDIFY_GET_ZOXIDE_OUT="$(___zoxidify_get_zoxide_out)"
-__ZOXIDIFY_GET_ZOXIDE_INTERACTIVE_OUT="$(___zoxidify_get_zoxide_out --interactive)"
+__ZOXIDIFY_GET_ZOXIDE_OUT="$(__zoxidify_get_zoxide_out)"
+__ZOXIDIFY_GET_ZOXIDE_INTERACTIVE_OUT="$(__zoxidify_get_zoxide_out --interactive)"
 
-unset -f ___zoxidify_get_zoxide_out
+unset -f __zoxidify_get_zoxide_out
 
 __ZOXIDIFY_GET_LAST_ARG="
     local last_arg
