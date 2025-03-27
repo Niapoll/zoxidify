@@ -72,7 +72,7 @@ __zoxidify_patch_editor() {
 
 __zoxidify_main() {
     if ! command -v zoxide &> /dev/null; then
-        echo '[!] Zoxidify (ZSH plugin): Zoxide is not installed. Please install Zoxide first.'
+        echo '[\e[1;31m!\e[0m] \e[1;31mZoxidify (ZSH plugin): Zoxide is not installed. Please install Zoxide first.\e[0m'
         return 1
     fi
 
