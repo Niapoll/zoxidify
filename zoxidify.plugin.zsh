@@ -44,7 +44,7 @@ __zoxidify_patch_editor() {
     local editor="$1"
 
     local lauch_editor="
-        $editor \"\${@:1:\$((\$# - 1))}\" \"\$zoxide_out\"
+        $editor \"\${(qq)@:1:\$((\$# - 1))}\" \"\$zoxide_out\"
     "
 
     local alias
